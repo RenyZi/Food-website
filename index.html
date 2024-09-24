@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website</title>
+</head>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--bootstrap-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--swiper css-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<body>
+
+    <!--section header-->
+    <div class="smooth-scroll-wrapper">
+        <div class="scroll-content">
+    <div class="container-fluid" id="header">
+        <div class="container">
+            <div class="navbar navbar-expand-sm">
+                <div class="navbar-brand text-light" style="font-size: 3rem;">Resot</div>
+                <button class="collapse-toggler" data-bs-target="#collapsebar" data-bs-toggle="collapse" id="toglcoldiv">
+                    <span class="collapse-toggler-icon fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center mt-3" id="collapsebar">
+                    <div class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#Home" class="nav-link pt-1 pb-1 text-light">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#About" class="nav-link pt-1 pb-1 text-light">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Menu" class="nav-link pt-1 pb-1 text-light">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Overview" class="nav-link pt-1 pb-1 text-light">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Order" class="nav-link pt-1 pb-1 text-light">Order</a>
+                        </li>
+                    </div><!--class navbar-->
+                </div><!--class collapse-->
+                <div class="cart d-flex mt-3">
+                    <a href="carts.html" class="nav-link p-0 text-light" style="font-size: 1rem;">
+                        <div class="iconbadge">
+                            <i class="fa-solid fa-cart-shopping" id="cartico"></i>
+                            <span class="badge rounded-pill bg-warning" id="pill"></span>
+                        </div> 
+
+                    </a>               
+                    <a href="login.php" class="nav-link pt-0 pb-0 text-light" style="font-size: 1rem;">Sign in</a>
+                </div><!--class cart-->
+            </div><!--class navbar expandable-->
+        </div><!--class container-->
+    </div><!--container fluid-->
+    
+
+<!--home section-->
+<div class="container-fluid" id="home">
+    <div class="container bg-dark containerhome pt-5 pb-5">
+        <div class="swiper p-3" id="swiperone">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-6" id="cont">
+                                <h2>Spicy Food</h2>
+                                <h1 class="text-success">Very Hot Pizza</h1>
+                                <p>
+                                    The  food is nothing short of **exceptional**—each dish is a harmonious blend of flavors, meticulously prepared and beautifully presented. The freshness of the ingredients, combined with the chef’s artistry, created an unforgettable dining 
+                                    experience that tantalized the taste buds and left you craving more with every bite."
+                                </p>
+                                <div id="order">
+                                <button class="btn btn-secondary m-0">Order Now</button>
+                                </div>
+                        </div><!--end of col one-->
+                            <div class="col-6 imgsize">
+                                <img src="Images/pic 6refine.png" alt="">
+                            </div><!--end of col two-->
+                    </div><!--end of row div-->
+                </div><!--end of swiper slide-->
+
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-6" id="cont">
+                                            
+                            <h2>Spicy Food</h2>
+                            <h1 class="text-success">Chicken Fried</h1>
+                            <p>
+                                "The **fried chicken** is a crispy, golden masterpiece, with a perfectly seasoned coating that gave way to tender, juicy meat inside. Each bite is packed with flavor, offering the perfect balance of crunch and succulence. 
+                                It is a comforting, indulgent dish that elevated the classic to a new level of deliciousness."
+                            </p>
+                            <div id="order">
+                                <button class="btn btn-secondary m-0">Order Now</button>
+                            </div>
+                        </div><!--end of col one-->
+                        <div class="col-6 imgsize">
+                            <img src="Images/pic 5refine.png" alt="">
+                        </div><!--end of col two-->
+                    </div><!--end of row div-->
+                </div><!--end of swiper slide-->
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-6" id="cont">
+                            <h2>Spicy Food</h2>
+                            <h1 class="text-success">Chicken Tikka</h1>
+                            <p>
+                                "The **chicken tikka** is a culinary delight, perfectly marinated and grilled to juicy perfection. Each bite offered a symphony of spices that was both bold and well-balanced, with a smoky aroma that enhanced the experience. 
+                                It was a true testament to authentic flavors, leaving us thoroughly impressed and satisfied."
+                            </p>
+                            <div id="order">
+                                <button class="btn btn-secondary m-0">Order Now</button>
+                            </div>
+        
+                        </div><!--end of col one-->
+                        <div class="col-6 imgsize">
+                            <img src="Images/pic 99 refine.png" alt="">
+                        </div><!--end of col two-->
+                    </div><!--end of row div-->
+                </div><!--end of swiper slide-->
+                
+            </div><!--end ofswiper wrapper-->
+        </div><!--end of swiper-->
+    </div><!--end of class container-->
+</div><!--end of class container fluid-->
+
+<!--section about-->
+
+<div class="container-fluid pt-5" id="about">
+    <div class="about" id="About">About Us</div>
+    <div class="row pb-5 pt-3" id="rowbat">
+        <div class="col-6" id="abtimg">
+        <img src="images/pic 14 refine.jpg" alt="">
+        </div><!--class col end-->
+        <div class="col-6" id="colabut">
+            <h2>Why we are Special?</h2>
+            <p>
+                At our restaurant, we pride ourselves on offering an exceptional dining experience that is unparalleled in both flavor and quality. 
+                Every dish on our menu is crafted with the freshest ingredients, thoughtfully prepared by our talented chefs who have mastered the art of bringing together bold, authentic flavors. Whether you’re craving something savory, spicy, or indulgent, our diverse menu promises to satisfy every palate.
+            </p>
+            <br><br><br>
+            <div class="dibv"><p>Where we do delivery?</p></div>
+            <ul>
+                <li>Nairobi</li>
+                <li>Nakuru</li>
+                <li>Mobasa</li>
+                <li>Turkana</li>
+                <li>Kakamega</li>
+            </ul>
+        </div><!--end of col 2-->
+    </div><!--class row end-->
+</div><!--class container-->
+
+<!--section menu-->
+<div class="container-fluid p-5" id="menu">
+    <div class="menu pb-5" id="Menu">Menu</div>
+    <div class="container pb-5 bg-light" style="border-radius: 1rem;">
+        <div class="row row-sm-cols-3 gx-4 gy-5">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic humg refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>KFC Chicken</li>
+                                <li>Very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 1600</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="disp">
+
+                    </div>
+                
+                    <div class="cartegor bg-dark text-light" id="cart1">
+                        <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                        Add to cart
+                    </div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic 9 refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Chicken tiker</li>
+                                <li>Very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 1500</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cartegor bg-dark text-light" id="cart2"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic 10 refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Rice Meat</li>
+                                <li>Very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 500</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cartegor bg-dark text-light" id="cart3"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic 11 refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Fried Meat</li>
+                                <li>Red meat, very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 600</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cartegor bg-dark text-light" id="cart4"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic 12 refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Pork meat with sweetpotatoes</li>
+                                <li>Very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 300</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cartegor bg-dark text-light" id="cart5"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="images/pic 14 refine.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Local made Rice with fish meat</li>
+                                <li>white meat, very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 800</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cartegor bg-dark text-light" id="cart6"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="Images/pic 15.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Baked strawberry mandazi</li>
+                                <li>very yummy</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 300</span>
+                            </div>
+                        </p>
+                    <div class="cartegor bg-dark text-light" id="cart7"><i class="fa-solid fa-cart-shopping" id="cart"></i>Add to cart</div>
+                    </div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="Images/pic 16.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Sweetpotato bagia soaked with sos</li>
+                                <li>very yummy</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 700</span>
+                            </div>
+                        </p>
+                    <div class="cartegor bg-dark text-light" id="cart8"><i class="fa-solid fa-cart-shopping" id="cart" ></i>Add to cart</div>
+                    </div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-img-top">
+                        <img src="Images/pic 17.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            <h4>Description</h4>
+                            <ul>
+                                <li>Pilau rice with red beans</li>
+                                <li>very tasty</li>
+                            </ul>
+                            <div class="cost">
+                                <button class="btn btn-primary">Order Now</button>
+                                <span>Cost Ksh 500</span>
+                            </div>
+                        </p>
+                    <div class="cartegor bg-dark text-light" id="cart9"><i class="fa-solid fa-cart-shopping" id="cart" ></i>Add to cart</div>
+                    </div>
+                </div><!--end of card-->
+            </div><!--end of col-->
+        </div><!--end of row-->
+    </div><!--class container-->
+</div><!--class fluid-->
+
+<!--Overview section-->
+<div class="container-fluid p-5"  id="views">
+    <div class="overview pb-3" id="Overview">Overview</div>
+    <div class="swiper mySwiper pb-5">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/jeff.jpg" alt=""></div>
+                    <div class="text">
+                            <h2>Jeff</h2>
+                        <p>
+                            The flavors in every dish were absolutely mind-blowing,
+                             a perfect blend of spices and freshness that left us craving more.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/zawadi refine.png" alt=""></div>
+                    <div class="text">
+                            <h2>Zawadi</h2>
+                        <p>The attention 
+                            to detail in both the presentation and quality of 
+                            ingredients made each bite a truly unforgettable experience.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/renifoo.png" alt=""></div>
+                    <div class="text">
+                            <h2>Renick</h2>
+                        <p>
+                            The cozy ambiance, 
+                            paired with the exceptional food and attentive service, 
+                            created a dining experience we would not soon forget.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/momfoowe.png" alt=""></div>
+                    <div class="text">
+                            <h2>Jane Kote</h2>
+                        <p>
+                            Each dish was beautifully balanced and seasoned with precision, 
+                            making it clear the chef takes pride in their craft.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/redrayfi.png" alt=""></div>
+                    <div class="text">
+                            <h2>Ray bons</h2>
+                        <p>
+                            The food not only looked amazing but tasted even better—each bite was an explosion of flavor and sheer indulgence.
+    
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/frank refine.png" alt=""></div>
+                    <div class="text">
+                            <h2>Francis</h2>
+                        <p>
+                            The menu offers an amazing variety, 
+                            and every dish we tried was packed with flavor, 
+                            leaving us completely impressed and satisfied.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+            <div class="swiper-slide" id="sliding">
+                <div class="immgg bg-light">
+                    <div class="coyl bg-primary"><img src="Images/njeri.jpg" alt=""></div>
+                    <div class="text">
+                            <h2>Njeri</h2>
+                        <p>
+                            The food was simply outstanding—fresh, flavorful, and presented beautifully,
+                             making for an all-around extraordinary dining experience.
+                        </p>
+                    </div>
+                </div><!--div imgg-->
+            </div><!--slide-->
+        </div><!--wrapper-->
+    </div><!--swiper-->  
+</div><!--container fluid-->
+
+<!--section order-->
+<div class="container-fluid" id="ord">
+    <div class="order p-5" id="Order">Order Section</div>
+    <div class="container pb-5">
+        
+        <form action="order.php" method="POST" class="bg-dark p-5">
+
+        <div class="row">
+            <div class="col-sm-6">
+            <label for="fnam" class="form-label">First Name</label>             
+            <input type="text" name="firtsnam" class="form-control" id="fnam" required>   
+
+            <label for="lnam" class="form-label">Last Name</label>               
+            <input type="text" name="lastnam" class="form-control" id="lnam" required>  
+
+            <label for="mail" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="mail" required>
+
+            <label for="tell" class="form-label">Your Number</label>
+            <input type="tel" name="contact" class="form-control" id="tell" required>
+
+            <label for="ording" class="form-label">Your Order</label>
+            <input type="text" name="orderd" class="form-control" id="ording" required>
+        </div><!--Col one-->
+            <div class="col-sm-6">
+            <label for="qunt" class="form-label">Quantity</label>
+            <input type="text" name="qunttity" class="form-control" id="qunt" required>
+
+            <label for="adres" class="form-label">Your Adress</label>
+            <input type="adres" name="adressed" class="form-control" id="adres" required>
+
+            <label for="contry" class="form-label">Your County</label>
+            <input type="text" name="County" class="form-control" id="contry" required>
+
+            <label for="city" class="form-label">Your City</label>
+            <input type="text" name="City" class="form-control" id="city" required>
+
+            <label for="buld" class="form-label">Street building</label>
+            <input type="text" name="bulding" class="form-control" id="buld" required>
+        </div><!---col two-->
+        <div class="col-6" id="coltextarea">
+            <textarea name="message" id="mess" placeholder="Additional information" required></textarea>    
+        </div><!--col message-->
+        <div class="bts" style="text-align: center;">
+            <button class="btn btn-primary" style="font-weight: bolder;" type="submit" id="formsend">Place Your Order</button></div>
+        </div><!--row div-->
+        </form>
+    </div><!--container-->
+</div><!--fluid container-->
+
+<!--section footer-->
+<div class="container-fluid" id="footer">
+    
+    <div class="container pt-5">
+        <div class="row row-cols-3">
+            <div class="col-sm-4 pb-3" id="qui">
+                <div class="txttt">Quick Links</div>
+                <ul class="quicklinks">
+                    <li><a href="#Home" >Home</a></li>
+                    <li><a href="#About" >About Us</a></li>
+                    <li><a href="#Menu" >Menu</a></li>
+                    <li><a href="#Overview" >Overview</a></li>
+                </ul><!--div nav-->
+            </div><!--div links footer-->
+            <div class="col-sm-4" id="inf">
+                <div class="cont">Contact Us</div>
+                <ul class="information">
+                    <li><a href="https://wa.link/t95wl9">Whatsapp : <i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#">Phone <i class="fa-solid fa-phone"></i> : +254 708031072</a></li>
+                    <li><a href="#">Email <i class="fa-regular fa-envelope"></i> : zikireni48@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4" id="more">
+                <div class="why">More Information</div>
+                <p>Our restaurant offers a unique dining experience with a diverse menu of expertly crafted dishes, warm ambiance, and attentive service, 
+                    making each visit a memorable journey through exceptional flavors and hospitality.</p>
+            </div>
+        </div><!--row class-->
+        <div class="copy">&copy 2024 Renick Riziki Design</div>
+    </div><!--class container-->
+</div><!--class fluid container-->
+
+</div><!--scroll content-->
+</div><!--smooth scroll wrapper-->
+</body>
+<!--bootsatrp js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous">
+</script>
+<!--swiper js-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--main script-->
+<script src="index.js"></script>
+</html>

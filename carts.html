@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website</title>
+    <!--bootstrap-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="mypage.css">
+
+    <style>
+        body{
+            background-color: black;
+            
+            position: relative;
+        }
+        .container-fluid{
+            padding-top: 1rem;
+            color: whitesmoke;
+            height: 100%;
+            background-color: black;  
+            z-index: -1;
+            
+        }
+        
+        
+        img{
+            width: 100%; 
+            height:250px;
+            display: block;  
+            object-fit: cover;
+            margin-bottom: 5px;
+            border-radius: 1rem;
+        }
+        .butts{
+            display: flex;
+            margin-top: 1rem;
+        }
+        .butts button{
+            background-color: orange;
+            outline: none;
+            border: none;
+            padding: 0.1rem 0.4rem;
+            color: whitesmoke;
+            font-weight: bolder;
+            border-radius: 0.4rem;
+        }
+        .checkout{
+            text-align: center;
+            border-right: 3px solid whitesmoke;
+            border-left: 3px solid whitesmoke;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            padding: 1rem 0;
+            
+        }
+        .checkout button{
+            color: whitesmoke;
+            background-color: orange;
+            outline: none;
+            border: none;
+            font-weight: bolder;
+            font-size: 1.4rem;
+            cursor: pointer;
+            
+        }
+        
+        .for{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.8);
+
+        }
+        .for form{
+            width: 500px;
+            border-left: 1px solid whitesmoke;
+            border-right: 1px solid whitesmoke;
+            border-bottom: 1px solid whitesmoke;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: black;
+            
+        }
+        input{
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+        label{
+            font-weight: bolder;
+        }
+        #phone{
+            font-weight: bolder;
+            padding-right: 1rem;
+        }
+        .buts{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            
+        }
+        .buts button{
+            font-weight: bolder;
+            
+        }
+        .dontshow{
+            height: 0;
+            overflow: hidden;
+            transition: all .54s ease-out;
+        }
+
+        .show{
+            height: 100vh;
+            transition: all .54s ease-in;
+        }
+        #text{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+    </style>
+</head>
+<body>
+    
+<div class="container-fluid">
+    <span id="ids" style="display: none;"></span>
+    <div class="displ">
+
+    </div>
+    <div class="checkout">
+        <button class="btn" id="total">Check Out <span id="sum"></span></button>
+    </div>
+    <div class="for dontshow">
+        <form action="loct.php" method="POST">
+            <h4 style="margin-bottom: 1rem;"><label>Enter Your Location</label></h4>
+            <div id="text"></div>
+            <table>
+                <tr>
+                    <td><label for="recv">Reciver Name</label></td>
+                    <td><input type="text" name="recve" id="recv" class="form-control"></td>
+                </tr>
+            
+                <tr>
+                    <td><label for="count">County</label></td>
+                    <td><input type="text" name="county" id="count" class="form-control"></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="addr">Address</label></td>
+                    <td><input type="text" name="addrs" id="addr" class="form-control"></td>
+                </tr>
+           
+                <tr>
+                    <td><label for="tele">Contact</label></td>
+                    <td><input type="tel" name="contact" id="tele" class="form-control"></td>
+                    
+                </tr>
+            </table>
+            <div class="buts">
+                <button class="btn btn-warning text-light" type="submit">Confirm the Older</button>
+                <input class="btn btn-danger" id="canc" value="Cancel">
+            </div>   
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+<!--bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous">
+</script>
+
+<script>
+   const responsedata = document.querySelector('.displ');
+   const chekout = document.querySelector(".checkout");
+   const buttontotal = document.getElementById("total");
+   const sumvalue = document.getElementById("sum");
+   const formclass = document.querySelector(".for");
+   
+   function data_cart(){
+
+   const xhhtp = new XMLHttpRequest();
+   xhhtp.onload = function(){
+        if(this.responseText === 'Your Cart is Empty'){
+            responsedata.innerHTML = this.responseText;
+            chekout.classList.add("nonactive");
+        }else{
+        const divelem = document.createElement('div');
+        divelem.innerHTML = this.responseText;
+        divelem.style.display = 'flex';
+        divelem.style.flexWrap = 'wrap';
+        divelem.style.gap = '3rem';
+        responsedata.appendChild(divelem); 
+        }
+    }
+
+   xhhtp.open("GET","cart.php");
+   xhhtp.send();
+
+   //ajax for total money
+   const ajx = new XMLHttpRequest();
+   ajx.onreadystatechange  = function(){
+    if(this.status === 200 && this.readyState === 4){
+        sumvalue.innerHTML = this.responseText;
+    }
+   }
+
+   ajx.open("GET","total.php");
+   ajx.send();
+}
+
+data_cart();
+//end of function data_cart
+   
+const buttonsid = document.getElementsByClassName("butts");
+
+function sendremove_ids(removids){
+        var divsids = "removeids="+removids;
+        const xtp = new XMLHttpRequest();
+        xtp.onload = function(){
+            const removelement = document.getElementById("div-"+removids);
+            if(removelement){
+                removelement.remove();
+            }
+            const ajx1 = new XMLHttpRequest();
+            ajx1.onreadystatechange  = function(){
+                if(this.status === 200 && this.readyState === 4){
+                    sumvalue.innerHTML = this.responseText;
+                }
+            }
+            ajx1.open("GET","total.php");
+            ajx1.send();
+            
+        }
+        xtp.open("POST","remove.php",true);
+        xtp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xtp.send(divsids);
+    }
+
+let loadCount = 0;
+
+
+window.onload = function(){
+
+    for(var i=0; i<buttonsid.length; i++){
+        buttonsid[i].addEventListener("click",function(){
+            var divs_id = this.id;
+            sendremove_ids(divs_id);
+        })
+    }
+
+    if(buttontotal.addEventListener("click",()=>{
+        var getid = document.querySelectorAll(".divs");
+        var arr = [];
+
+        for(var x=0; x<getid.length; x++){
+            var ids = getid[x].id;
+            if(ids){
+                arr.push(ids);
+            }   
+        }
+
+        arr 
+
+        const xhtp = new XMLHttpRequest();
+        xhtp.onreadystatechange = function(){
+            if(this.status===200 && this.readyState === 4){
+                document.getElementById("text").innerHTML =  "The amount to be paid on delivery is "+'<h3>'+`${sumvalue.textContent}`+'</h3>';
+            }
+        }
+        xhtp.open("POST","send_data.php",true);
+        xhtp.setRequestHeader("Content-Type","application/json;charst=UTF-8");
+        xhtp.send(JSON.stringify(arr));
+        
+        formclass.classList.add("show")?.classList.add("show");
+        formclass.classList.remove("dontshow");
+        
+         
+    }));
+
+    const cancl = document.getElementById("canc");
+    cancl.addEventListener("click",()=>{
+        formclass.classList.add("dontshow")?.classList.add("dontshow");
+        formclass.classList.remove("show");
+    })
+}
+//working on the checkout button
+
+
+</script>
+
+</html>

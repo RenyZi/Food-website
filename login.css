@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor:  rgb(216, 142, 5);
+    --textColor: whitesmoke;
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+}
+.container-fluid{
+    background-color: var(--bgcolor);
+    height: 100vh;
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border-top: 4px solid #0076ff;
+    border-bottom: 4px solid #0076ff;
+    width: 400px;
+    height: 500px;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+#log{
+    font-size: 2rem;
+    color: var(--textColor);
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    
+}
+form input{
+    margin-top: 2rem;
+    cursor: pointer;
+    
+}
+.butts{
+    margin-top: 3rem;
+}
+#reg{
+    font-weight: bolder;
+    margin-top: 1rem;
+    display: block;
+}
+
+.error{
+    color: whitesmoke;
+    border-radius: 0.4rem;
+    display: block;
+    text-align: center;
+
+}
+.disp{
+    border: 1px solid black;
+    border-radius: 2rem;
+    position: absolute;
+    margin-left: 0.94rem;
+    top: 50%;
+    width: 400px;
+    transform: translateY(-50%);
+    max-width: 300px;
+    height: 50vh;
+    padding: 2rem;
+    
+
+}
+.dispnon{
+    display: none;
+}
+.dispactive{
+    display: block;
+}
+.filter{
+    filter: blur(10%);
+}

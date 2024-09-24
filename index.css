@@ -1,0 +1,1551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor:  rgb(216, 142, 5);
+    --textColor: whitesmoke;
+}
+body,html{
+    background-color: var(--bgcolor);
+}
+#header{
+    background-color: var(--bgcolor);
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+}
+#header .nav-item a{
+    position: relative;
+    border: 1px solid whitesmoke;
+    margin-left: 5px;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all .54s ease-in-out;
+}
+#header .nav-item a:hover{
+    transform: scale(0.8);
+}
+#header .nav-item a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: whitesmoke;
+    z-index: -1;
+    transition: all .54s ease-in-out;
+}
+
+#toglcoldiv{
+    padding: 0 0.4rem; outline: none; border: none; border-radius: 0.2rem;
+    display: none;
+}
+
+
+#header .nav-item a:hover:after{
+    width: 100%;
+}
+
+/*section home*/
+#home{
+    background-color: var(--bgcolor);
+    color: var(--textColor);
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.containerhome{
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#swiperone{
+    height: 100%;
+    max-height: 100%;
+    
+}
+.swiper-wrapper{
+    height: 100%;
+    max-height: 100%;
+}
+.swiper-slide{
+    height: 100%;
+    max-height: 100%;
+}
+
+#cont h2{
+    font-size: 2.8rem;
+}
+#cont h1{
+    font-size: 3.8rem;
+}
+#cont p{
+    padding-top: 3rem;
+    font-size: 1rem;
+}
+
+#order{
+    padding: 0;
+    
+}
+
+.imgsize{
+    display: block;
+
+}
+.imgsize img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: contain;
+}
+/*section about*/
+#about{
+    background-color: var(--bgcolor);
+    border-top: 2px solid whitesmoke;
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+
+}
+.about{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--textColor);
+    font-weight: bolder;
+}
+
+#abtimg{
+    height: 70vh;
+    max-height: 70vh;
+    
+}
+#abtimg img{
+    border-radius: 2rem;
+    border: 1px solid whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    
+}
+#colabut{
+    color: var(--textColor);
+    text-align: justify;
+    height: 70vh;
+    max-height: 70vh;
+    font-size: 1rem;
+    
+    
+}
+
+/*section menu*/
+.card-img-top > img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 300px;
+    cursor: pointer;
+}
+#menu{
+    background-color: var(--bgcolor);
+    border-top: 2px solid whitesmoke;
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+}
+.menu{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--textColor);
+    font-weight: bolder;
+    
+}
+/* card */
+.card{
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+    border-radius: 4rem;
+    overflow: hidden;
+}
+.card-text{
+    padding-left: 0.4rem;
+    
+}
+.cartegor{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+
+    
+}
+.cart{
+    display: flex;
+    align-items: center;
+}
+#cart{
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+#cartico{
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+.iconbadge{
+    position: relative;
+    display: flex;
+}
+#pill{
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.cost span{
+    color: crimson;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-right: .4rem;
+}
+/*section overview*/
+#views{
+    background-color: var(--bgcolor);
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+    height: 100%;
+    border-top: 2px solid whitesmoke;
+}
+.overview{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--textColor);
+    font-weight: bolder;
+}
+#sliding{
+    width: 300px;
+}
+.immgg{
+    border: 1px solid whitesmoke;
+    width: 22rem;
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+.coyl{
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+.coyl img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    margin: 0 auto;
+    display: block;
+}
+.text {
+    text-align: center;
+}
+.text p{
+    font-weight: bolder;
+    font-style: italic;
+    margin-top: 0.9rem;
+
+}
+.cost{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* order section*/
+#ord{
+    background-color: var(--bgcolor);
+    box-shadow: inset 20px 100px 170px rgba(0, 0, 0, 1),inset -20px -100px 170px rgba(0, 0, 0, 1);
+    color: var(--textColor);
+    border-top: 2px solid whitesmoke;
+}
+.order{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--textColor);
+    font-weight: bolder;
+}
+form{
+    
+    border-radius: 2rem;
+    border-right: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    
+}
+form input{
+    outline: none;
+    cursor: pointer;
+}
+form label{
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 0.1rem;
+    font-weight: bolder;
+}
+#coltextarea{
+   margin: 1rem auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 16vh;
+}
+#mess{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0.1rem solid whitesmoke;
+    outline: none;
+    color: var(--textColor);
+
+}
+.btn{
+    margin-top: 1rem;
+    transition: all .54s ease-in-out;
+}
+.btn:hover{
+    transform: scale(0.8);
+}
+/*Section footer*/
+#footer{
+    background-color: black;
+}
+#qui{
+    color: var(--textColor);
+    border-right: 1px solid whitesmoke;
+}
+.txttt{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.quicklinks{
+    margin: 0;
+    padding: 0;
+}
+.quicklinks li{
+    list-style: none;
+    padding-top: 1rem;
+    transition: all .54s ease-in-out;
+}
+.quicklinks li a{
+    text-decoration: none;
+    color: var(--textColor);
+    
+
+}
+.quicklinks li:hover{
+    transform: scale(0.8);
+}
+#inf{
+    border-right: 1px solid whitesmoke;
+}
+.cont{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: var(--textColor);
+}
+.information{
+    margin: 0;
+    padding: 0;
+}
+
+.information li{
+    list-style: none;
+    padding-top: 1rem;
+}
+.information li a{
+    text-decoration: none;
+    color: var(--textColor);
+    
+}
+.why{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: var(--textColor);
+}
+#more p{
+    color: var(--textColor);
+}
+
+/**/
+.copy{
+    
+    color: var(--textColor);
+    font-weight: bolder;
+    margin-top: 1.8rem;
+}
+
+
+/*media Query small mobile*/
+@media(max-width:320px){
+   
+    #cont h2{
+        font-size: 95%;
+    }
+    #cont h1{
+        font-size: 95%;
+    }
+    #cont p{
+        font-size: 75%;
+        padding-top: 0;
+    
+    }
+    #order button{
+        font-size: 75%;
+    }
+    .imgsize{
+        display: flex;
+        justify-content: center;
+    }
+    .imgsize img{
+        width: 200px;
+        height: 200px;
+        display: block;
+        object-fit: fill;
+    }
+    #toglcoldiv{
+        padding: 0 0.4rem; outline: none; border: none; border-radius: 0.2rem;
+        display: block;
+    }
+    
+    /*about section*/
+    #abtimg{
+        width: 100%;
+    }
+    .about{
+        text-align: center;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 95%;
+    }
+    #abtimg img{
+        border-radius: 2rem;
+        border: 1px solid whitesmoke;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        
+    }
+    #colabut{
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--textColor);
+        text-align: justify;
+        height: 70vh;
+        max-height: 70vh;
+        font-size: 80%;
+        padding-top: 0.1rem;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    /*section menu*/
+    .card{
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+        border-radius: 4rem;
+        overflow: hidden;
+        font-size: 80%;
+    }
+    #Menu{
+        font-size: 95%;
+    }
+    .card-text{
+        padding-left: 0.4rem;
+        
+       
+    }
+    .card-text h4{
+        font-size: 95%;
+    }
+    .cartegor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+    
+        
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+    }
+    #cart{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+    }
+    #cartico{
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .iconbadge{
+        position: relative;
+        display: flex;
+    }
+    #pill{
+        font-size: 0.6rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    .cost{
+        display: flex;
+        align-items: center;
+    }
+    .cost button{
+        font-size: 95%;
+    }
+    .cost span{
+        color: crimson;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-right: .4rem;
+        font-size: 95%;
+    }
+    /*overview*/
+    .overview{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 95%;
+    }
+    #sliding{
+        width: 100px;
+    }
+    .immgg{
+        border: 1px solid whitesmoke;
+        width: 10rem;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .coyl{
+        border-radius: 1rem;
+        padding: 1rem 0;
+    }
+    .coyl img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid whitesmoke;
+        margin: 0 auto;
+        display: block;
+    }
+    .text {
+        text-align: center;
+    }
+    .text p{
+        font-weight: bolder;
+        font-style: italic;
+        margin-top: 0.9rem;
+        font-size: 80%;
+    
+    }
+    .cost{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*section order*/
+    .order{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 95%;
+    }
+    form{  
+        border-radius: 2rem;
+        border-right: 1px solid whitesmoke;
+        border-left: 1px solid whitesmoke;  
+    }
+    form input{
+        outline: none;
+        cursor: pointer;
+    }
+    form label{
+        color: whitesmoke;
+        cursor: pointer;
+        margin-top: 0.1rem;
+        font-weight: bolder;
+        font-size: 80%;
+    }
+    #coltextarea{
+       margin: 1rem auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 16vh;
+    }
+    #mess{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 0.8rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0.1rem solid whitesmoke;
+        outline: none;
+        color: var(--textColor);
+    
+    }
+
+    /*footer*/
+    .txttt{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        font-size: 80%;
+    }
+    .quicklinks{
+        margin: 0;
+        padding: 0;
+    }
+    .quicklinks li{
+        list-style: none;
+        padding-top: 1rem;
+        transition: all .54s ease-in-out;
+        font-size: 80%;
+    }
+    .quicklinks li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 80%;
+    
+    }
+    .quicklinks li:hover{
+        transform: scale(0.8);
+    }
+    #inf{
+        border-right: 1px solid whitesmoke;
+    }
+    .cont{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        font-size: 80%;
+    }
+    .information{
+        margin: 0;
+        padding: 0;
+        font-size: 80%;
+    }
+    
+    .information li{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 80%;
+    }
+    .information li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 80%;
+    }
+    .why{
+        font-size: 1.6rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 80%;
+    }
+    #more p{
+        color: var(--textColor);
+        font-size: 80%;
+    }
+}
+
+/*media Query medium mobile*/
+@media(max-width:375px){
+    #cont h2{
+        font-size: 96%;
+    }
+    #cont h1{
+        font-size: 96%;
+    }
+    #cont p{
+        font-size: 78%;
+        padding-top: 0;
+    
+    }
+    #order button{
+        font-size: 78%;
+    }
+    .imgsize{
+        display: flex;
+        justify-content: center;
+    }
+    .imgsize img{
+        width: 210px;
+        height: 210px;
+        display: block;
+        object-fit: fill;
+    }
+    #toglcoldiv{
+        padding: 0 0.4rem; outline: none; border: none; border-radius: 0.2rem;
+        display: block;
+    }
+    /*about section*/
+    #abtimg{
+        width: 100%;
+    }
+    .about{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 95%;
+    }
+    #abtimg img{
+        border-radius: 2rem;
+        border: 1px solid whitesmoke;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        
+    }
+    #colabut{
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--textColor);
+        text-align: justify;
+        height: 70vh;
+        max-height: 70vh;
+        font-size: 82%;
+        padding-top: 0.1rem;
+        width: 100%;
+
+    }
+
+    /*section menu*/
+    .card{
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+        border-radius: 4rem;
+        overflow: hidden;
+        font-size: 80%;
+    }
+    #Menu{
+        font-size: 98%;
+    }
+    .card-text{
+        padding-left: 0.4rem;
+        
+       
+    }
+    .card-text h4{
+        font-size: 95%;
+    }
+    .cartegor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+    
+        
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+    }
+    #cart{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+    }
+    #cartico{
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .iconbadge{
+        position: relative;
+        display: flex;
+    }
+    #pill{
+        font-size: 0.6rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    .cost{
+        display: flex;
+        align-items: center;
+    }
+    .cost button{
+        font-size: 95%;
+    }
+    .cost span{
+        color: crimson;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-right: .4rem;
+        font-size: 95%;
+    }
+    /*overview*/
+    .overview{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 98%;
+    }
+    #sliding{
+        width: 300px;
+    }
+    .immgg{
+        border: 1px solid whitesmoke;
+        width: 10rem;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .coyl{
+        border-radius: 1rem;
+        padding: 1rem 0;
+    }
+    .coyl img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid whitesmoke;
+        margin: 0 auto;
+        display: block;
+    }
+    .text {
+        text-align: center;
+    }
+    .text p{
+        font-weight: bolder;
+        font-style: italic;
+        margin-top: 0.9rem;
+        font-size: 80%;
+    
+    }
+    .cost{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*section order*/
+    .order{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 98%;
+    }
+    form{  
+        border-radius: 2rem;
+        border-right: 1px solid whitesmoke;
+        border-left: 1px solid whitesmoke;  
+    }
+    form input{
+        outline: none;
+        cursor: pointer;
+    }
+    form label{
+        color: whitesmoke;
+        cursor: pointer;
+        margin-top: 0.1rem;
+        font-weight: bolder;
+        font-size: 80%;
+    }
+    #coltextarea{
+       margin: 1rem auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 16vh;
+    }
+    #mess{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 0.8rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0.1rem solid whitesmoke;
+        outline: none;
+        color: var(--textColor);
+    
+    }
+
+    /*footer*/
+    .txttt{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        font-size: 90%;
+    }
+    .quicklinks{
+        margin: 0;
+        padding: 0;
+    }
+    .quicklinks li{
+        list-style: none;
+        padding-top: 1rem;
+        transition: all .54s ease-in-out;
+        font-size: 88%;
+    }
+    .quicklinks li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 88%;
+    
+    }
+    .quicklinks li:hover{
+        transform: scale(0.8);
+    }
+    #inf{
+        border-right: 1px solid whitesmoke;
+    }
+    .cont{
+        
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 88%;
+    }
+    .information{
+        margin: 0;
+        padding: 0;
+        font-size: 88%;
+    }
+    
+    .information li{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 88%;
+    }
+    .information li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 88%;
+    }
+    .why{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 88%;
+    }
+    #more p{
+        color: var(--textColor);
+        font-size: 88%;
+    }
+}
+
+/*media Query large mobile*/
+@media(max-width:425px){
+    #cont h2{
+        font-size: 98%;
+    }
+    #cont h1{
+        font-size: 98%;
+    }
+    #cont p{
+        font-size: 90%;
+        padding-top: 0;
+    
+    }
+    #order button{
+        font-size: 80%;
+    }
+    .imgsize{
+        display: flex;
+        justify-content: center;
+    }
+    .imgsize img{
+        width: 200px;
+        height: 200px;
+        display: block;
+        object-fit: fill;
+    }
+    #toglcoldiv{
+        padding: 0 0.4rem; outline: none; border: none; border-radius: 0.2rem;
+        display: block;
+    }
+    
+    /*about section*/
+    #abtimg{
+        width: 100%;
+    }
+    .about{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 100%;
+    }
+    #abtimg img{
+        border-radius: 2rem;
+        border: 1px solid whitesmoke;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        
+    }
+    #colabut{
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--textColor);
+        text-align: justify;
+        height: 70vh;
+        max-height: 70vh;
+        font-size: 100%;
+        padding-top: 0.1rem;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    /*section menu*/
+    .card{
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+        border-radius: 4rem;
+        overflow: hidden;
+        font-size: 90%;
+    }
+    #Menu{
+        font-size: 100%;
+    }
+    .card-text{
+        padding-left: 0.4rem;
+        
+       
+    }
+    .card-text h4{
+        font-size: 90%;
+    }
+    .cartegor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+    
+        
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+    }
+    #cart{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+    }
+    #cartico{
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .iconbadge{
+        position: relative;
+        display: flex;
+    }
+    #pill{
+        font-size: 0.6rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    .cost{
+        display: flex;
+        align-items: center;
+    }
+    .cost button{
+        font-size: 90%;
+    }
+    .cost span{
+        color: crimson;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-right: .4rem;
+        font-size: 90%;
+    }
+    /*overview*/
+    .overview{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 100%;
+    }
+    #sliding{
+        width: 300px;
+    }
+    .immgg{
+        border: 1px solid whitesmoke;
+        width: 10rem;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .coyl{
+        border-radius: 1rem;
+        padding: 1rem 0;
+    }
+    .coyl img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid whitesmoke;
+        margin: 0 auto;
+        display: block;
+    }
+    .text {
+        text-align: center;
+    }
+    .text p{
+        font-weight: bolder;
+        font-style: italic;
+        margin-top: 0.9rem;
+        font-size: 90%;
+    
+    }
+    .cost{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*section order*/
+    .order{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        font-size: 100%;
+    }
+    form{  
+        border-radius: 2rem;
+        border-right: 1px solid whitesmoke;
+        border-left: 1px solid whitesmoke;  
+    }
+    form input{
+        outline: none;
+        cursor: pointer;
+    }
+    form label{
+        color: whitesmoke;
+        cursor: pointer;
+        margin-top: 0.1rem;
+        font-weight: bolder;
+        font-size: 90%;
+    }
+    #coltextarea{
+       margin: 1rem auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 16vh;
+    }
+    #mess{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 0.8rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0.1rem solid whitesmoke;
+        outline: none;
+        color: var(--textColor);
+    
+    }
+
+    /*footer*/
+    .txttt{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        font-size: 90%;
+    }
+    .quicklinks{
+        margin: 0;
+        padding: 0;
+    }
+    .quicklinks li{
+        list-style: none;
+        padding-top: 1rem;
+        transition: all .54s ease-in-out;
+        font-size: 90%;
+    }
+    .quicklinks li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 90%;
+    
+    }
+    .quicklinks li:hover{
+        transform: scale(0.8);
+    }
+    #inf{
+        border-right: 1px solid whitesmoke;
+    }
+    .cont{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 90%;
+    }
+    .information{
+        margin: 0;
+        padding: 0;
+        font-size: 90%;
+    }
+    
+    .information li{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 90%;
+    }
+    .information li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 90%;
+    }
+    .why{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 90%;
+    }
+    #more p{
+        color: var(--textColor);
+        font-size: 90%;
+    }
+}
+
+/*media Query tablet mobile*/
+@media(max-width:768px){
+    #cont h2{
+        font-size: 100%;
+    }
+    #cont h1{
+        font-size: 100%;
+    }
+    #cont p{
+        font-size: 1rem;
+        padding-top: 0;
+    
+    }
+    #order button{
+        font-size: 100%;
+    }
+    .imgsize{
+        display: flex;
+        justify-content: center;
+    }
+    .imgsize img{
+        width: 400px;
+        height: 100%;
+        display: block;
+        object-fit: fill;
+    }
+    #toglcoldiv{
+        padding: 0 0.4rem; outline: none; border: none; border-radius: 0.2rem;
+        display: block;
+    }
+    
+    /*about section*/
+    #abtimg{
+        width: 100%;
+    }
+    .about{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        
+    }
+    #abtimg img{
+        border-radius: 2rem;
+        border: 1px solid whitesmoke;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        object-fit: cover;
+        
+    }
+    #colabut{
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--textColor);
+        text-align: justify;
+        height: 70vh;
+        max-height: 70vh;
+        font-size: 100%;
+        padding-top: 0.1rem;
+        width: 100%;
+
+    }
+
+    /*section menu*/
+    .card{
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0,0.7);
+        border-radius: 4rem;
+        overflow: hidden;
+        font-size: 100%;
+    }
+    #Menu{
+        font-size: 100%;
+    }
+    .card-text{
+        padding-left: 0.4rem;
+        
+       
+    }
+    .card-text h4{
+        font-size: 100%;
+    }
+    .cartegor{
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+    
+        
+    }
+    .cart{
+        display: flex;
+        align-items: center;
+    }
+    #cart{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+    }
+    #cartico{
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .iconbadge{
+        position: relative;
+        display: flex;
+    }
+    #pill{
+        font-size: 0.6rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    .cost{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cost button{
+        font-size: 80%;
+    }
+    .cost span{
+        color: crimson;
+        font-size: 95%;
+        font-weight: bolder;
+        margin-right: .4rem;
+    
+    }
+    /*overview*/
+    .overview{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        
+    }
+    #sliding{
+        width: 300px;
+    }
+    .immgg{
+        border: 1px solid whitesmoke;
+        width: 22rem;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .coyl{
+        border-radius: 1rem;
+        padding: 1rem 0;
+    }
+    .coyl img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 2px solid whitesmoke;
+        margin: 0 auto;
+        display: block;
+    }
+    .text {
+        text-align: center;
+    }
+    .text p{
+        font-weight: bolder;
+        font-style: italic;
+        margin-top: 0.9rem;
+        font-size: 90%;
+    
+    }
+    .cost{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*section order*/
+    .order{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--textColor);
+        font-weight: bolder;
+        
+    }
+    form{  
+        border-radius: 2rem;
+        border-right: 1px solid whitesmoke;
+        border-left: 1px solid whitesmoke;  
+    }
+    form input{
+        outline: none;
+        cursor: pointer;
+    }
+    form label{
+        color: whitesmoke;
+        cursor: pointer;
+        margin-top: 0.1rem;
+        font-weight: bolder;
+        font-size: 90%;
+    }
+    #coltextarea{
+       margin: 1rem auto;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 16vh;
+    }
+    #mess{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 0.8rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0.1rem solid whitesmoke;
+        outline: none;
+        color: var(--textColor);
+    
+    }
+
+    /*footer*/
+    .txttt{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        font-size: 95%;
+    }
+    .quicklinks{
+        margin: 0;
+        padding: 0;
+    }
+    .quicklinks li{
+        list-style: none;
+        padding-top: 1rem;
+        transition: all .54s ease-in-out;
+        font-size: 95%;
+    }
+    .quicklinks li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 95%;
+    
+    }
+    .quicklinks li:hover{
+        transform: scale(0.8);
+    }
+    #inf{
+        border-right: 1px solid whitesmoke;
+    }
+    .cont{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        
+    }
+    .information{
+        margin: 0;
+        padding: 0;
+        font-size: 95%;
+    }
+    
+    .information li{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 95%;
+    }
+    .information li a{
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 95%;
+    }
+    .why{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        color: var(--textColor);
+        font-size: 95%;
+    }
+    #more p{
+        color: var(--textColor);
+        font-size: 95%;
+    }
+}
